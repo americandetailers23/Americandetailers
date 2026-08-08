@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | American Detailer's | Luxury Auto Detailing Studio</title>
+    <meta name="description" content="Explore our premium auto detailing services in Mohali. Ceramic Coating, Paint Protection Film (PPF), Car Wrapping, and more.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <style>
+        /* ==========================================================================
+           CSS VARIABLES & GLOBAL (Light Theme ONLY)
+           ========================================================================== */
+        :root {
+            --primary: #182B6B;
+            --primary-light: #253b8f;
+            --accent: #E53945;
+            --bg-main: #FFFFFF;
+            --bg-secondary: #F8F9FB;
+            --text-dark: #1A1A1A;
+            --text-muted: #666666;
+            
+            --font-heading: 'Sora', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+            
+            --shadow-soft: 0 15px 35px rgba(24, 43, 107, 0.05);
+            --shadow-hover: 0 25px 50px rgba(24, 43, 107, 0.12);
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.6);
+            
+            --radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: initial; } 
+        body { font-family: var(--font-body); color: var(--text-dark); background: var(--bg-main); line-height: 1.6; overflow-x: hidden; }
+
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        img { max-width: 100%; height: auto; }
+
+        /* Utilities */
+        .container { width: 90%; max-width: 1320px; margin: 0 auto; }
+        .section-padding { padding: 100px 0; }
+        .pt-0 { padding-top: 0 !important; }
+        .pb-0 { padding-bottom: 0 !important; }
+        .bg-secondary { background: var(--bg-secondary); }
+        .bg-primary { background: var(--primary); }
+        .bg-accent { background: var(--accent); }
+        .text-primary { color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .text-white { color: #fff; }
+        .text-warning { color: #FFB800; }
+        .text-center { text-align: center; }
+        .text-muted { color: var(--text-muted); }
+        .text-muted-light { color: #A0AABF; }
+        .w-100 { width: 100%; }
+        .m-0 { margin: 0 !important; }
+        .mb-1 { margin-bottom: 0.25rem; } .mb-2 { margin-bottom: 0.5rem; } .mb-3 { margin-bottom: 1rem; } .mb-4 { margin-bottom: 1.5rem; } .mb-5 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.25rem; } .mt-2 { margin-top: 0.5rem; } .mt-3 { margin-top: 1rem; } .mt-4 { margin-top: 1.5rem; } .mt-5 { margin-top: 3rem; }
+        .ms-2 { margin-left: 0.5rem; } .ms-auto { margin-left: auto; } .me-2 { margin-right: 0.5rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; } .px-3 { padding-left: 1rem; padding-right: 1rem; } .px-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-3 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; } .py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+        .d-flex { display: flex; } .d-inline-flex { display: inline-flex; } .d-inline-block { display: inline-block; }
+        .flex-column { flex-direction: column; }
+        .justify-content-between { justify-content: space-between; } .justify-content-center { justify-content: center; }
+        .align-items-center { align-items: center; } .align-items-start { align-items: flex-start; } .align-items-baseline { align-items: baseline; }
+        .flex-wrap { flex-wrap: wrap; } .gap-1 { gap: 0.25rem; } .gap-2 { gap: 0.5rem; } .gap-3 { gap: 1rem; } .gap-4 { gap: 1.5rem; }
+        .fs-2 { font-size: 2rem; } .fs-3 { font-size: 1.5rem; } .fs-4 { font-size: 1.25rem; } .fs-5 { font-size: 1.1rem; }
+        .fw-bold { font-weight: 700; } .font-weight-bold { font-weight: 600; } .small { font-size: 0.85rem; }
+        .shadow-premium { box-shadow: var(--shadow-soft); } .shadow-sm { box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); }
+        .rounded { border-radius: .25rem; }
+        .border-top { border-top: 1px solid rgba(255,255,255,0.1); } .border-0 { border: 0 !important; }
+
+        .section-label { color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; font-weight: 600; }
+        .section-title { font-size: 3rem; margin-bottom: 20px; }
+
+        /* Buttons */
+        .btn { display: inline-flex; justify-content: center; align-items: center; padding: 16px 36px; border-radius: 50px; font-family: var(--font-heading); font-weight: 600; font-size: 1rem; transition: var(--transition); cursor: pointer; border: 2px solid transparent; }
+        .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 20px rgba(24, 43, 107, 0.2); }
+        .btn-primary:hover { background: #122154; transform: translateY(-3px); box-shadow: 0 15px 25px rgba(24, 43, 107, 0.3); color: #fff; }
+        .btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: #fff; }
+        .btn-glass { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.5); backdrop-filter: blur(10px); }
+        .btn-glass:hover { background: #fff; color: var(--primary); transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+        .btn-glow { box-shadow: 0 0 20px rgba(24, 43, 107, 0.4); }
+        .btn-glow:hover { box-shadow: 0 0 30px rgba(24, 43, 107, 0.6); }
+        .btn-text { color: var(--accent); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-text:hover { gap: 12px; }
+
+        /* Cards & Hover */
+        .glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: var(--glass-border); border-radius: var(--radius); }
+        .luxury-card { background: var(--bg-main); border-radius: var(--radius); box-shadow: var(--shadow-soft); transition: var(--transition); overflow: hidden; border: 1px solid rgba(0,0,0,0.03); }
+        .glass-hover:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-color: rgba(24, 43, 107, 0.1); }
+
+        /* Progress & Floats */
+        .scroll-progress { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: var(--accent); z-index: 10001; }
+        .floating-btn { position: fixed; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; color: white; z-index: 999; transition: var(--transition); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .floating-btn:hover { transform: scale(1.1); }
+        .float-wa { bottom: 30px; right: 30px; background: #25D366; }
+        .float-call { bottom: 105px; right: 30px; background: var(--primary); }
+        .pulse-anim { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+        /* Header & Navbar */
+        .header { position: fixed; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000; transition: var(--transition); }
+        .header.scrolled { padding: 15px 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); box-shadow: var(--shadow-soft); border-bottom: 1px solid rgba(255,255,255,0.5); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .brand-logo img { height: 70px; transition: var(--transition); }
+        .header.scrolled .brand-logo img { height: 55px; }
+        .nav-menu ul { display: flex; gap: 35px; }
+        .nav-link { font-size: 1rem; font-weight: 500; color: var(--text-dark); position: relative; transition: color 0.3s; padding-bottom: 5px; }
+        .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: var(--primary); transition: var(--transition); }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 20px; }
+        .action-icon { font-size: 22px; color: var(--primary); display: inline-flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .action-icon:hover { color: var(--accent); transform: scale(1.1); }
+        .nav-btn { padding: 12px 28px; }
+        .hamburger { display: none; background: none; border: none; font-size: 1.6rem; color: var(--text-dark); cursor: pointer; }
+
+        /* ==========================================================================
+           SERVICES PAGE SPECIFIC STYLES
+           ========================================================================== */
+        
+        /* Hero Section */
+        .gallery-hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; padding-top: 120px; padding-bottom: 60px; background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; background-attachment: fixed; }
+        .hero-light-overlay { position: absolute; inset: 0; background: rgba(248, 249, 251, 0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; width: 100%; text-align: center; }
+        
+        .breadcrumb { display: inline-block; color: var(--primary); font-weight: 600; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; background: #fff; padding: 10px 28px; border-radius: 50px; box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.05); }
+        .hero-title { font-size: 4.5rem; margin-bottom: 25px; line-height: 1.1; color: var(--text-dark); letter-spacing: -1px; }
+        .hero-desc { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 45px; font-weight: 400; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+        .hero-buttons-wrapper { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; width: 100%; }
+        
+        .btn-hero-solid { background: var(--primary); color: #fff; padding: 16px 36px; border-radius: 50px; font-weight: 600; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); border: none; font-size: 1.05rem; text-decoration: none;}
+        .btn-hero-solid:hover { background: var(--primary-light); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(24, 43, 107, 0.3); color: #fff; }
+        
+        .btn-hero-outline { background: transparent; color: var(--primary); padding: 16px 36px; border-radius: 50px; font-weight: 600; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); border: 1.5px solid rgba(24, 43, 107, 0.8); font-size: 1.05rem; text-decoration: none;}
+        .btn-hero-outline:hover { background: rgba(24, 43, 107, 0.05); transform: translateY(-3px); }
+
+        /* ==========================================================================
+           CRITICAL FIX: RESPONSIVE POSTER IMAGE SYSTEM
+           ========================================================================== */
+        .service-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 40px; 
+        }
+        
+        .service-card { 
+            display: flex; 
+            flex-direction: column; 
+            height: 100%; 
+        }
+        
+        .service-card-image {
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            background: #050505; /* Premium dark background to frame posters */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius) var(--radius) 0 0;
+            position: relative;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Prevents ANY cropping of the poster */
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.03); /* Subtle premium zoom without hiding text */
+        }
+        
+        /* Card Body & Flex Alignment */
+        .card-body { 
+            padding: 35px 30px; 
+            flex-grow: 1; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: flex-start; 
+            background: var(--bg-main); 
+            border-top: 1px solid rgba(0,0,0,0.03); 
+        }
+        .card-icon { font-size: 2.2rem; margin-bottom: 20px; display: block; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-body h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .card-body p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+        
+        .service-benefits { margin-bottom: 30px; width: 100%; }
+        .service-benefits li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-dark); font-weight: 500; }
+        .service-benefits i { color: var(--accent); }
+
+        .service-actions { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            width: 100%; 
+            margin-top: auto; /* Forces buttons to bottom regardless of content height */
+            padding-top: 20px; 
+            border-top: 1px solid rgba(0,0,0,0.05); 
+        }
+        .service-actions .btn-outline-sm { padding: 10px 20px; border: 1px solid rgba(24, 43, 107, 0.2); border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: var(--transition); }
+        .service-actions .btn-outline-sm:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        /* Why Choose Us */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .feature-card { padding: 45px 30px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; border: 1px solid rgba(0,0,0,0.03); }
+        .feature-icon { font-size: 2.8rem; margin-bottom: 25px; display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* FAQ Accordion */
+        .faq-container { max-width: 850px; margin: 40px auto 0; }
+        .acc-item { background: var(--bg-main); border-radius: var(--radius); margin-bottom: 15px; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid rgba(0,0,0,0.03); }
+        .acc-header { width: 100%; padding: 22px 30px; background: none; border: none; text-align: left; font-size: 1.1rem; font-family: var(--font-heading); font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); color: var(--text-dark); }
+        .acc-header:hover, .acc-header.active { color: var(--primary); }
+        .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .acc-content p { padding: 0 30px 22px; color: var(--text-muted); margin: 0; }
+
+        /* Final CTA */
+        .final-cta-wrapper { background: linear-gradient(135deg, var(--primary), #0a1435); border-radius: 30px; padding: 80px 40px; position: relative; overflow: hidden; box-shadow: 0 25px 50px rgba(24, 43, 107, 0.2); }
+        .cta-shape { position: absolute; right: -5%; top: -10%; font-size: 350px; color: rgba(255,255,255,0.03); pointer-events: none; transform: rotate(-15deg); }
+        .final-cta-content { position: relative; z-index: 2; }
+
+        /* Footer */
+        .footer { background: #0A1128; color: #fff; padding: 80px 0 30px; }
+        .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 50px; }
+        .footer-logo{ width:170px; height:auto; object-fit:contain; display:block; }
+        .footer-col h4 { font-size: 1.2rem; margin-bottom: 25px; color: #fff; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #A0AABF; transition: var(--transition); display: inline-block; }
+        .footer-links a:hover { color: #fff; transform: translateX(5px); }
+        .footer-contact-list { list-style: none; padding: 0; margin: 0; color: #A0AABF; }
+        .social-links a { display: inline-flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); justify-content: center; align-items: center; border-radius: 50%; transition: var(--transition); color: #fff; }
+        .social-links a:hover { background: var(--accent); transform: translateY(-3px); }
+        .payment-icons { gap: 10px; }
+        .payment-icons i { transition: var(--transition); }
+        .payment-icons i:hover { color: #fff; transform: translateY(-2px); }
+
+        /* Preloader */
+        .no-scroll { overflow: hidden !important; height: 100vh !important; }
+        #premium-preloader { z-index: 999999; position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; background: #ffffff; transition: opacity 0.6s ease, transform 0.6s ease; }
+        .preloader-logo { width: 180px; height: auto; object-fit: contain; opacity: 0; animation: preloaderLogoAnim 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes preloaderLogoAnim { 0% { opacity: 0; transform: scale(0.8) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 10px 30px rgba(24, 43, 107, 0.15)); } }
+        .preloader-welcome { margin-top: 35px; text-align: center; opacity: 0; animation: preloaderTextAnim 1s ease forwards 0.6s; }
+        .preloader-welcome .small-text { display: block; font-size: 0.8rem; letter-spacing: 5px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; font-weight: 500; }
+        .preloader-welcome .large-text { font-size: 2.2rem; font-family: var(--font-heading); font-weight: 700; color: var(--text-dark); letter-spacing: -0.5px; }
+        @keyframes preloaderTextAnim { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+        .preloader-bar-container { width: 260px; height: 4px; background: var(--bg-secondary); border-radius: 10px; margin-top: 45px; overflow: hidden; position: relative; opacity: 0; animation: preloaderFadeIn 0.5s ease forwards 1.2s; }
+        .preloader-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 10px; box-shadow: 0 0 15px var(--accent); animation: preloaderFill 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.2s; }
+        @keyframes preloaderFill { 0% { width: 0%; } 100% { width: 100%; } }
+        .preloader-text { margin-top: 15px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; opacity: 0; animation: preloaderFadeIn 0.5s ease forwards 1.2s; }
+        .preloader-text .dots::after { content: ''; animation: loadingDots 1.5s infinite steps(4, end); }
+        @keyframes loadingDots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } 100% { content: ''; } }
+        @keyframes preloaderFadeIn { to { opacity: 1; } }
+
+        /* Responsive Media Queries */
+        @media (min-width: 769px) { .mobile-only { display: none !important; } }
+        @media (max-width: 1024px) {
+            .hero-content .hero-title { font-size: 3.2rem; }
+            .features-grid { grid-template-columns: 1fr 1fr; }
+            .footer-top { grid-template-columns: repeat(2, 1fr); }
+            
+            /* Grid adjustments for Tablet */
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-actions, .nav-menu { display: none; }
+            .hamburger { display: block; z-index: 1002; }
+            .nav-menu.active { display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--bg-main); flex-direction: column; justify-content: center; align-items: center; z-index: 1001; }
+            .nav-menu.active ul { flex-direction: column; text-align: center; gap: 25px; }
+            .nav-menu.active a.nav-link { font-size: 1.5rem; }
+            
+            .hero-content .hero-title { font-size: 2.5rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            
+            /* Grid adjustments for Mobile */
+            .service-grid { grid-template-columns: 1fr; }
+            
+            /* Footer mobile fixes */
+            .footer-top { grid-template-columns: 1fr; text-align: center; gap: 40px;}
+            .footer-logo { margin: 0 auto 15px auto !important; }
+            .social-links, .payment-icons { justify-content: center; }
+            .footer-contact-list li { justify-content: center; text-align: left; }
+            .trust-col .google-badge { align-items: center !important; margin: 0 auto; }
+            
+            .gallery-hero { padding-top: 120px; min-height: 50vh; }
+            .btn-hero-solid, .btn-hero-outline { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Luxury Preloader -->
+    <div id="premium-preloader" aria-label="Loading American Detailer's website">
+        <img src="MOHALI.png" alt="American Detailer's Logo" class="preloader-logo">
+        <div class="preloader-welcome">
+            <span class="small-text">Welcome To</span>
+            <span class="large-text">American Detailer's</span>
+        </div>
+        <div class="preloader-bar-container">
+            <div class="preloader-bar"></div>
+        </div>
+        <div class="preloader-text">Loading<span class="dots"></span></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Floating Actions -->
+    <a href="https://wa.me/918264121920?text=Hi%20American%20Detailer's,%20I%20need%20assistance." class="floating-btn float-wa pulse-anim" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+918264121920" class="floating-btn float-call mobile-only" aria-label="Call Us">
+        <i class="fas fa-phone-volume"></i>
+    </a>
+
+    <!-- Navbar -->
+    <header id="navbar" class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo" aria-label="Home">
+                <img src="MOHALI.png" alt="American Detailer's Logo">
+            </a>
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="index.html#studio" class="nav-link">Our Studio</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="tel:+918264121920" class="action-icon" aria-label="Call Now"><i class="fas fa-phone-volume"></i></a>
+                <a href="contactus.html" class="btn btn-primary btn-glow nav-btn">Book Appointment</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- 1. Premium Services Hero Section -->
+    <section class="gallery-hero">
+        <div class="hero-light-overlay"></div>
+        <div class="container hero-content text-center">
+            <div class="breadcrumb gs-reveal">Premium Services</div>
+            <h1 class="hero-title gs-reveal">Professional Auto <span class="text-primary">Detailing</span></h1>
+            <p class="hero-desc gs-reveal">Experience unmatched automotive care. From permanent ceramic shields to precision paint correction, our master detailers bring flawless perfection to your vehicle.</p>
+            
+            <div class="hero-buttons-wrapper gs-reveal">
+                <a href="contactus.html" class="btn-hero-solid">Book Appointment</a>
+                <a href="tel:+918264121920" class="btn-hero-outline"><i class="fas fa-phone-volume me-2"></i> Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Services Grid (10 Complete Services - Exact Layout as Requested) -->
+    <section class="section-padding bg-main">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h4 class="section-label">Our Expertise</h4>
+                <h2 class="section-title">Explore All <span class="text-primary">Services</span></h2>
+            </div>
+
+            <div class="service-grid">
+                
+                <!-- Service 1: Ceramic Coating -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786171110/coating_qdvdky.png" alt="Ceramic Coating Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-spray-can card-icon"></i>
+                        <h3>Ceramic & Graphene Coating</h3>
+                        <p>Permanent 9H+ and 10H nanoceramic protection offering extreme chemical resistance, intense gloss, and unparalleled hydrophobicity.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Permanent Bond to Clear Coat</li>
+                            <li><i class="fas fa-check-circle"></i> Self-Cleaning Properties</li>
+                            <li><i class="fas fa-check-circle"></i> Up to 5 Years Warranty</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: PPF -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786171041/ppf_hvkxyx.png" alt="Paint Protection Film Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-layer-group card-icon"></i>
+                        <h3>Paint Protection Film (PPF)</h3>
+                        <p>Invisible, self-healing thermoplastic urethane shield protecting your vehicle from rock chips, deep scratches, and road debris.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Advanced Self-Healing Tech</li>
+                            <li><i class="fas fa-check-circle"></i> Ultimate Scratch Defense</li>
+                            <li><i class="fas fa-check-circle"></i> 5 to 10 Years Warranty</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Paint Correction -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786170815/paint_dungpp.png" alt="Paint Correction Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-magic card-icon"></i>
+                        <h3>Paint Correction & Polishing</h3>
+                        <p>Multi-stage machine compounding to permanently eliminate swirl marks, oxidation, etching, and light clear coat scratches.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Flawless Mirror Finish</li>
+                            <li><i class="fas fa-check-circle"></i> Defect & Scratch Removal</li>
+                            <li><i class="fas fa-check-circle"></i> Restores Showroom Shine</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Interior Detailing -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786170857/interior_squxdz.png" alt="Deep Interior Detailing Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-couch card-icon"></i>
+                        <h3>Deep Interior Detailing</h3>
+                        <p>Comprehensive interior sanitization, steam cleaning, stain extraction, and premium leather conditioning for a flawless cabin.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Steam Sterilization</li>
+                            <li><i class="fas fa-check-circle"></i> Leather & Trim Restoration</li>
+                            <li><i class="fas fa-check-circle"></i> Odor Removal</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Exterior Detailing -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786170648/enterior_nn1nyu.png" alt="Exterior Detailing Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-car-wash card-icon"></i>
+                        <h3>Complete Exterior Detailing</h3>
+                        <p>Luxury foam wash, chemical decontamination, clay bar treatment, and sealant application for intense gloss and protection.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Iron & Tar Decontamination</li>
+                            <li><i class="fas fa-check-circle"></i> Alloy & Glass Coating</li>
+                            <li><i class="fas fa-check-circle"></i> Premium Wax Application</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Engine Bay Detailing -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786170547/engine_gemmiy.png" alt="Engine Bay Detailing Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-cogs card-icon"></i>
+                        <h3>Engine Bay Detailing</h3>
+                        <p>Safe and meticulous degreasing, steam cleaning, and plastic dressing to restore your engine bay to factory-new condition.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Safe Electrical Cleaning</li>
+                            <li><i class="fas fa-check-circle"></i> Heavy Grease Removal</li>
+                            <li><i class="fas fa-check-circle"></i> Plastic UV Protection</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 7: Car Wrapping -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786170458/wrap_o2c32s.png" alt="Premium Car Wrapping Service Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-fill-drip card-icon"></i>
+                        <h3>Premium Car Wrapping</h3>
+                        <p>Transform your vehicle with custom vinyl wraps in matte, satin, high-gloss, or color-shift finishes from top global brands.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Complete Color Change</li>
+                            <li><i class="fas fa-check-circle"></i> Protects Original Paint</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Reversible</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <!-- Service 9: Mechanical & Maintenance -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786171351/maintainance_tbxob9.png" alt="Mechanical Services Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-tools card-icon"></i>
+                        <h3>General Mechanical & Maintenance</h3>
+                        <p>Complete vehicle maintenance and mechanical services to keep your vehicle running safely and smoothly.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Engine Oil & Filter Replacement</li>
+                            <li><i class="fas fa-check-circle"></i> Brake & Clutch Service</li>
+                            <li><i class="fas fa-check-circle"></i> Battery & Fluid Checks</li>
+                            <li><i class="fas fa-check-circle"></i> General Mechanical Inspection</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 10: Body & Accidental Repair -->
+                <div class="luxury-card service-card glass-hover" data-aos="fade-up">
+                    <div class="service-card-image">
+                        <img src="https://res.cloudinary.com/hx9nm2i8/image/upload/v1786170009/accidental_j2drfy.png" alt="Body and Accidental Repair Poster" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <i class="fas fa-hammer card-icon"></i>
+                        <h3>Body & Accidental Repair</h3>
+                        <p>Professional repair services for body damage, ensuring your vehicle is restored to factory standards flawlessly.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-check-circle"></i> Accident Damage Repair</li>
+                            <li><i class="fas fa-check-circle"></i> Dent & Paint Repair</li>
+                            <li><i class="fas fa-check-circle"></i> Insurance Claim Assistance</li>
+                            <li><i class="fas fa-check-circle"></i> Complete Body Restoration</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="contactus.html" class="btn-text">Book Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="contactus.html" class="btn-outline-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Why Choose Us -->
+    <section class="why-choose-us section-padding bg-secondary">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h4 class="section-label">The Premium Standard</h4>
+                <h2 class="section-title">Why Choose <span class="text-primary">Us</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="luxury-card glass-card feature-card glass-hover" data-aos="fade-up">
+                    <i class="fas fa-certificate feature-icon"></i>
+                    <h3>Certified Team</h3>
+                    <p class="text-muted m-0">Factory-trained master detailers ensuring flawless application of ceramics and PPF.</p>
+                </div>
+                <div class="luxury-card glass-card feature-card glass-hover" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-gem feature-icon"></i>
+                    <h3>Imported Products</h3>
+                    <p class="text-muted m-0">We exclusively use globally recognized, industry-leading chemical compounds.</p>
+                </div>
+                <div class="luxury-card glass-card feature-card glass-hover" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-microscope feature-icon"></i>
+                    <h3>Premium Equipment</h3>
+                    <p class="text-muted m-0">State-of-the-art infrared curing lamps, dual-action polishers, and lighting.</p>
+                </div>
+                <div class="luxury-card glass-card feature-card glass-hover" data-aos="fade-up">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Genuine Warranty</h3>
+                    <p class="text-muted m-0">Every premium coating and PPF package includes a documented, manufacturer warranty.</p>
+                </div>
+                <div class="luxury-card glass-card feature-card glass-hover" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-users-cog feature-icon"></i>
+                    <h3>Experienced Technicians</h3>
+                    <p class="text-muted m-0">Over 5 years of specialized luxury automotive mechanical and body repair experience.</p>
+                </div>
+                <div class="luxury-card glass-card feature-card glass-hover" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-heart feature-icon"></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p class="text-muted m-0">Our 4.9/5 Google rating reflects our unwavering commitment to exceeding expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FAQ Section -->
+    <section id="faq" class="faq-section section-padding bg-main">
+        <div class="container faq-container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h4 class="section-label">Got Questions?</h4>
+                <h2 class="section-title">Frequently Asked <span class="text-primary">Questions</span></h2>
+            </div>
+            
+            <div class="luxury-accordion" data-aos="fade-up">
+                <div class="acc-item"><button class="acc-header">How long does Ceramic Coating take? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>The entire process takes 3-4 days. This includes washing, intense paint correction, applying multiple layers of ceramic, and 24 hours of infrared curing.</p></div></div>
+                <div class="acc-item"><button class="acc-header">Will PPF affect the color of my car? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>No, our premium TPU Paint Protection Films are optically clear and UV resistant, meaning they will not yellow or alter your vehicle's factory paint color.</p></div></div>
+                <div class="acc-item"><button class="acc-header">Do you do complete body repainting? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>Yes, we offer computerized paint matching and use state-of-the-art paint booths for flawless full-body painting and accidental repairs.</p></div></div>
+                <div class="acc-item"><button class="acc-header">How often should I get an oil change? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>We recommend synthetic oil changes every 10,000 km or once a year, whichever comes first, to keep your engine running smoothly.</p></div></div>
+                <div class="acc-item"><button class="acc-header">Is Rust Coating really necessary? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>Yes, underbody rust coating protects your chassis from water, salt, and grime, significantly prolonging the structural life of your vehicle.</p></div></div>
+                <div class="acc-item"><button class="acc-header">Can you wrap my car in Matte Black? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>Absolutely. We have hundreds of vinyl options, including premium matte, satin, and gloss blacks from 3M and Avery Dennison.</p></div></div>
+                <div class="acc-item"><button class="acc-header">Do you provide warranties on bike coatings? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>Yes, our specialized bike ceramic coatings come with official warranties depending on the package selected (usually 1-3 years).</p></div></div>
+                <div class="acc-item"><button class="acc-header">Do you handle accidental insurance claims? <i class="fas fa-chevron-down"></i></button><div class="acc-content"><p>Yes, we assist with complete insurance repair processing to get your vehicle back to factory standards with zero hassle.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Final CTA -->
+    <section class="section-padding pb-0 bg-secondary">
+        <div class="container">
+            <div class="final-cta-wrapper text-center text-white" data-aos="zoom-in">
+                <i class="fas fa-car cta-shape"></i>
+                <div class="final-cta-content">
+                    <h2 class="mb-4" style="font-size: 3rem;">Ready To Give Your Vehicle A Premium Finish?</h2>
+                    <p class="mb-5 fs-5 text-muted-light">Join thousands of satisfied car enthusiasts in Mohali. Speak directly with our master detailer today.</p>
+                    <div class="d-flex justify-content-center flex-wrap gap-3">
+                        <a href="contactus.html" class="btn btn-primary btn-glow px-5 py-3 fs-5">Book Appointment</a>
+                        <a href="https://wa.me/918264121920?text=Hi%20American%20Detailer's,%20I%20want%20to%20book%20a%20service." target="_blank" class="btn btn-glass px-5 py-3 fs-5"><i class="fab fa-whatsapp me-2"></i> WhatsApp Us</a>
+                        <a href="tel:+918264121920" class="btn btn-outline border-white text-white px-5 py-3 fs-5 btn-glass"><i class="fas fa-phone-volume me-2"></i> Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div style="height: 100px; background: var(--bg-secondary);"></div>
+
+    <!-- 6. Footer (Matches specific mobile fixes requested) -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <!-- Column 1: Logo & Desc -->
+            <div class="footer-col brand-col">
+                <img src="MOHALI.png" alt="American Detailer's Logo" class="footer-logo mb-3" loading="lazy">
+                <p class="text-muted-light font-weight-bold mb-4">"We Bring Your Cars To Life."</p>
+                <div class="social-links d-flex gap-2">
+                    <a href="https://www.instagram.com/american_detailers" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/american_detailers" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/american_detailers" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/american_detailers" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2: Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#studio">Our Studio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Contact Info -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact-list">
+                    <li class="d-flex align-items-start gap-2 mb-3">
+                        <i class="fas fa-map-marker-alt text-accent mt-1"></i>
+                        <span>E-59, Phase 8, Industrial Area, Sector 73,<br>Sahibzada Ajit Singh Nagar, Mohali, Punjab, India</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2 mb-3">
+                        <i class="fas fa-phone-volume text-accent"></i>
+                        <span>+91 82641 21920</span>
+                        <span>+91 87270 60001</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2 mb-3">
+                        <i class="fas fa-envelope text-accent"></i>
+                        <span>americandetailers23@gmail.com</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-clock text-accent"></i>
+                        <span>Mon - Sun:  9:30AM - 7:00PM</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Trust & Payments -->
+            <div class="footer-col trust-col">
+                <h4>Trust & Quality</h4>
+                <div class="google-badge bg-white text-dark p-3 rounded d-inline-flex flex-column align-items-start gap-1 mb-4 shadow-sm">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fab fa-google text-primary fs-4"></i>
+                        <div class="text-warning small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                    <span class="fw-bold small">Rated 4.9 on Google (899+ Reviews)</span>
+                </div>
+                
+                <h4>Secure Payments</h4>
+                <div class="payment-icons fs-3 text-muted-light d-flex flex-wrap gap-2 align-items-center mt-2">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom container text-center pt-4 mt-2">
+            <p class="m-0 text-muted-light">
+                &copy; 2026 American Detailer's. All Rights Reserved.
+                <span class="footer-credit-divider">|</span>
+                Designed by <strong>Princepal Singh</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Lock scroll for preloader
+            document.body.classList.add('no-scroll');
+
+            /* Lenis Smooth Scrolling Integration */
+            window.lenisInstance = null;
+            if (typeof Lenis !== 'undefined') {
+                window.lenisInstance = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    direction: 'vertical',
+                    smooth: true,
+                    smoothTouch: false
+                });
+
+                window.lenisInstance.stop();
+
+                function raf(time) {
+                    window.lenisInstance.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
+            }
+
+            /* Initialize AOS */
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 1000, once: true, offset: 50, easing: 'ease-out-cubic' });
+            }
+
+            /* Navbar & Mobile Menu Logic */
+            const header = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    const icon = hamburger.querySelector('i');
+                    if (navMenu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+                    else icon.classList.replace('fa-times', 'fa-bars');
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        hamburger.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                    }
+                });
+            });
+
+            /* FAQ Accordion Logic */
+            const accHeaders = document.querySelectorAll('.acc-header');
+            accHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    
+                    document.querySelectorAll('.acc-content').forEach(item => {
+                        if (item !== content) {
+                            item.style.maxHeight = null;
+                            item.previousElementSibling.classList.remove('active');
+                            item.previousElementSibling.querySelector('i').classList.replace('fa-chevron-up', 'fa-chevron-down');
+                        }
+                    });
+
+                    header.classList.toggle('active');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                    }
+                });
+            });
+        });
+
+        /* Preloader & GSAP Logic */
+        const preloaderStartTime = Date.now();
+
+        window.addEventListener("load", () => {
+            const elapsed = Date.now() - preloaderStartTime;
+            const minWaitTime = 1200; 
+            const remainingTime = Math.max(0, minWaitTime - elapsed);
+
+            setTimeout(() => {
+                const preloader = document.getElementById('premium-preloader');
+                if (preloader) {
+                    preloader.style.opacity = '0';
+                    preloader.style.transform = 'scale(1.02)';
+                    preloader.style.pointerEvents = 'none';
+
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                        document.body.classList.remove('no-scroll');
+                        if (window.lenisInstance) window.lenisInstance.start();
+                        playCinematicReveal();
+                    }, 600);
+                } else {
+                    document.body.classList.remove('no-scroll');
+                    if (window.lenisInstance) window.lenisInstance.start();
+                    playCinematicReveal();
+                }
+            }, remainingTime);
+        });
+
+        function playCinematicReveal() {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.from(".header", { y: -100, opacity: 0, duration: 1.2, ease: "power3.out" });
+                gsap.from(".gs-reveal", { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out", delay: 0.2 });
+
+                setTimeout(() => {
+                    ScrollTrigger.refresh();
+                    const scrollBar = document.getElementById('scroll-progress');
+                    if (scrollBar) {
+                        gsap.to(scrollBar, {
+                            width: "100%", ease: "none",
+                            scrollTrigger: { trigger: document.body, start: "top top", end: "bottom bottom", scrub: 0.3 }
+                        });
+                    }
+                }, 100);
+            }
+        }
+    </script>
+</body>
+</html>

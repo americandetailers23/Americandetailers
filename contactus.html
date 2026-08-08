@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | American Detailer's - Premium Auto Detailing</title>
+    <meta name="description" content="Contact American Detailer's in Mohali. Book an appointment for Ceramic Coating, PPF, Paint Correction, and Premium Detailing.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        /* ==========================================================================
+           CSS VARIABLES & GLOBAL SETTINGS
+           ========================================================================== */
+        :root {
+            --primary: #182B6B;
+            --primary-light: #253b8f;
+            --accent: #E53945;
+            --bg-main: #FFFFFF;
+            --bg-secondary: #F8F9FB;
+            --text-dark: #1A1A1A;
+            --text-muted: #666666;
+            
+            --font-heading: 'Sora', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+            
+            --shadow-soft: 0 15px 35px rgba(24, 43, 107, 0.05);
+            --shadow-hover: 0 30px 60px rgba(24, 43, 107, 0.12);
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.6);
+            
+            --radius-xl: 24px;
+            --radius-md: 12px;
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: initial; }
+        body { font-family: var(--font-body); color: var(--text-dark); background: var(--bg-main); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        img, video { max-width: 100%; height: auto; display: block; }
+
+        /* Utilities */
+        .container { width: 90%; max-width: 1320px; margin: 0 auto; }
+        .section-padding { padding: 120px 0; }
+        .bg-secondary { background: var(--bg-secondary); }
+        .bg-primary { background: var(--primary); }
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .text-white { color: #ffffff; }
+        .text-warning { color: #FFB800; }
+        .text-muted { color: var(--text-muted); }
+        .text-muted-light { color: #A0AABF; }
+        .w-100 { width: 100%; }
+        
+        .mt-0 { margin-top: 0 !important; } .mb-0 { margin-bottom: 0 !important; }
+        .mt-2 { margin-top: 0.5rem; } .mt-3 { margin-top: 1rem; } .mt-4 { margin-top: 1.5rem; } .mt-5 { margin-top: 3rem; }
+        .mb-2 { margin-bottom: 0.5rem; } .mb-3 { margin-bottom: 1rem; } .mb-4 { margin-bottom: 1.5rem; } .mb-5 { margin-bottom: 3rem; }
+        .gap-2 { gap: 0.5rem; } .gap-3 { gap: 1rem; } .gap-4 { gap: 1.5rem; }
+        
+        .d-flex { display: flex; } .d-inline-flex { display: inline-flex; }
+        .flex-column { flex-direction: column; } .flex-wrap { flex-wrap: wrap; }
+        .align-items-center { align-items: center; } .align-items-start { align-items: flex-start; } .align-items-baseline { align-items: baseline; }
+        .justify-content-center { justify-content: center; } .justify-content-between { justify-content: space-between; }
+        
+        .fs-3 { font-size: 1.5rem; } .fs-4 { font-size: 1.25rem; } .fs-5 { font-size: 1.1rem; }
+        .fw-bold { font-weight: 700; } .small { font-size: 0.85rem; }
+        
+        .shadow-premium { box-shadow: var(--shadow-soft); } 
+        
+        .section-label { color: var(--accent); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 12px; display: block; font-weight: 600; }
+        .section-title { font-size: 3.2rem; margin-bottom: 20px; letter-spacing: -1px; }
+        .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
+
+        /* Glass Cards */
+        .glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: var(--glass-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-soft); transition: var(--transition); }
+        .hover-lift { transition: var(--transition); }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+        /* Buttons */
+        .btn { display: inline-flex; justify-content: center; align-items: center; padding: 16px 36px; border-radius: 50px; font-family: var(--font-heading); font-weight: 600; font-size: 1rem; transition: var(--transition); cursor: pointer; border: 2px solid transparent; gap: 8px; text-decoration: none;}
+        .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 20px rgba(24, 43, 107, 0.2); }
+        .btn-primary:hover { background: var(--primary-light); transform: translateY(-4px); box-shadow: 0 15px 30px rgba(24, 43, 107, 0.3); color: #fff; }
+        .btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-4px); }
+        .btn-glow { box-shadow: 0 0 20px rgba(24, 43, 107, 0.4); }
+        .btn-glow:hover { box-shadow: 0 0 30px rgba(24, 43, 107, 0.6); }
+        .btn-whatsapp { background: #25D366; color: #fff; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); border: none; }
+        .btn-whatsapp:hover { background: #1ebd5a; color: #fff; transform: translateY(-4px); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4); }
+
+        /* Floating Actions & Progress */
+        .scroll-progress { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: var(--accent); z-index: 10001; }
+        .floating-btn { position: fixed; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; color: white; z-index: 999; transition: var(--transition); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .floating-btn:hover { transform: scale(1.1); }
+        .float-wa { bottom: 30px; right: 30px; background: #25D366; }
+        .float-call { bottom: 105px; right: 30px; background: var(--primary); display: none; }
+        @media (max-width: 768px) { .float-call { display: flex; } }
+        .pulse-anim { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+        /* ==========================================================================
+           EXACT NAVBAR
+           ========================================================================== */
+        .header { position: fixed; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000; transition: var(--transition); }
+        .header.scrolled { padding: 15px 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); box-shadow: var(--shadow-soft); border-bottom: 1px solid rgba(255,255,255,0.5); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .brand-logo img { height: 70px; transition: var(--transition); }
+        .header.scrolled .brand-logo img { height: 55px; }
+        .nav-menu ul { display: flex; gap: 35px; }
+        .nav-link { font-size: 1rem; font-weight: 500; color: var(--text-dark); position: relative; transition: color 0.3s; padding-bottom: 5px; }
+        .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: var(--primary); transition: var(--transition); }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 20px; }
+        .action-icon { font-size: 22px; color: var(--primary); display: inline-flex; align-items: center; justify-content: center; transition: var(--transition); transform: none !important; }
+        .action-icon:hover { color: var(--accent); }
+        .nav-btn { padding: 12px 28px; }
+        .hamburger { display: none; background: none; border: none; font-size: 1.6rem; color: var(--text-dark); cursor: pointer; }
+
+        /* ==========================================================================
+           1. PREMIUM HERO
+           ========================================================================== */
+        .contact-hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; padding-top: 100px; background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; background-attachment: fixed; }
+        .hero-light-overlay { position: absolute; inset: 0; background: rgba(248, 249, 251, 0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; }
+        
+        .breadcrumb { display: inline-block; color: var(--primary); font-weight: 600; font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; background: var(--glass-bg); padding: 8px 24px; border-radius: 50px; box-shadow: var(--shadow-soft); border: var(--glass-border); }
+        .hero-title { font-size: 4.5rem; margin-bottom: 15px; line-height: 1.1; color: var(--text-dark); letter-spacing: -1px;}
+        .hero-subtitle { font-size: 1.8rem; font-family: var(--font-heading); font-weight: 600; color: var(--primary); margin-bottom: 25px; }
+        .hero-desc { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; font-weight: 400; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+        
+        /* ==========================================================================
+           2. CONTACT INFORMATION CARDS (Fixed Typography & Spacing)
+           ========================================================================== */
+        .contact-info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: -80px; position: relative; z-index: 10; }
+        .info-card { padding: 40px 20px; text-align: center; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #fff; }
+        .info-icon { width: 65px; height: 65px; background: rgba(24, 43, 107, 0.05); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.6rem; color: var(--primary); margin-bottom: 20px; transition: var(--transition); }
+        .info-card:hover .info-icon { background: var(--primary); color: #fff; transform: scale(1.1); box-shadow: 0 10px 20px rgba(24, 43, 107, 0.2); }
+        .info-card h3 { font-size: 1.25rem; margin-bottom: 15px; color: var(--text-dark); font-weight: 700;}
+        .info-card p, .info-card a { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; font-weight: 500; transition: var(--transition); margin:0;}
+        .info-card a:hover { color: var(--primary); }
+        
+        .click-to-call { display: inline-block; margin-top: 15px; font-size: 0.85rem; padding: 6px 16px; background: rgba(229, 57, 69, 0.1); color: var(--accent); border-radius: 50px; font-weight: 600; text-decoration: none;}
+        .click-to-call:hover { background: var(--accent); color: #fff; }
+
+        /* ==========================================================================
+           3. BOOK APPOINTMENT FORM (With "Other" Input field)
+           ========================================================================== */
+        .form-section { position: relative; }
+        .bg-gradient-circle { position: absolute; border-radius: 50%; filter: blur(140px); opacity: 0.1; z-index: -1; pointer-events: none; }
+        .blur-blue { width: 600px; height: 600px; background: var(--primary); top: 10%; left: -10%; }
+        .blur-red { width: 500px; height: 500px; background: var(--accent); bottom: 10%; right: -10%; }
+
+        .booking-form-wrapper { padding: 60px; max-width: 1000px; margin: 0 auto; background: #fff;}
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .full-width { grid-column: span 2; }
+        
+        .form-floating { position: relative; }
+        .form-input { width: 100%; padding: 22px 20px 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 1rem; color: var(--text-dark); background: rgba(255,255,255,0.7); transition: var(--transition); outline: none; appearance: none; -webkit-appearance: none; }
+        textarea.form-input { min-height: 150px; resize: vertical; padding-top: 25px; }
+        .form-floating label { position: absolute; top: 18px; left: 20px; color: var(--text-muted); transition: var(--transition); pointer-events: none; font-size: 1rem; margin: 0; }
+        
+        .form-input:focus, .form-input:not(:placeholder-shown) { border-color: var(--primary); background: #fff; box-shadow: 0 0 0 4px rgba(24, 43, 107, 0.05); }
+        .form-input:focus ~ label, .form-input:not(:placeholder-shown) ~ label { top: 8px; font-size: 0.75rem; color: var(--primary); font-weight: 600; }
+        
+        select.form-input { padding-top: 20px; padding-bottom: 10px; cursor: pointer; }
+        .select-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+        
+        input[type="date"].form-input, input[type="time"].form-input { padding-top: 24px; padding-bottom: 10px; cursor: pointer; }
+        input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.6; transition: var(--transition); }
+        input[type="date"]:focus::-webkit-calendar-picker-indicator, input[type="time"]:focus::-webkit-calendar-picker-indicator { opacity: 1; color: var(--primary); }
+
+        .checkbox-wrapper { display: flex; align-items: center; gap: 12px; margin-top: 10px; cursor: pointer; user-select: none; }
+        .checkbox-wrapper input { display: none; }
+        .checkmark { width: 22px; height: 22px; border: 2px solid rgba(0,0,0,0.2); border-radius: 6px; display: flex; justify-content: center; align-items: center; transition: var(--transition); background: #fff; }
+        .checkbox-wrapper input:checked + .checkmark { background: var(--primary); border-color: var(--primary); }
+        .checkmark::after { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: #fff; font-size: 0.75rem; display: none; }
+        .checkbox-wrapper input:checked + .checkmark::after { display: block; }
+        .checkbox-text { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* Dynamically shown element styling */
+        #otherServiceContainer { transition: all 0.3s ease; }
+
+        /* ==========================================================================
+           5. GOOGLE MAP
+           ========================================================================== */
+        .map-section { padding: 100px 0; background: var(--bg-secondary); }
+        .full-width-map-container { width: 100%; padding: 0 5%; max-width: 1600px; margin: 0 auto; position: relative; }
+        .full-width-map-container iframe { width: 100%; height: 450px; border-radius: var(--radius-xl); box-shadow: var(--shadow-hover); border: 1px solid rgba(255,255,255,0.6); display: block; background: var(--glass-bg); padding: 5px; }
+        .map-buttons { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+
+        /* ==========================================================================
+           6. FAQ
+           ========================================================================== */
+        .faq-container { max-width: 900px; margin: 0 auto; }
+        .acc-item { background: #fff; border-radius: var(--radius-md); margin-bottom: 20px; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid rgba(0,0,0,0.03);}
+        .acc-header { width: 100%; padding: 25px 30px; background: none; border: none; text-align: left; font-size: 1.15rem; font-family: var(--font-heading); font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); color: var(--text-dark); }
+        .acc-header:hover, .acc-header.active { color: var(--primary); }
+        .acc-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(24, 43, 107, 0.05); display: flex; justify-content: center; align-items: center; color: var(--primary); transition: var(--transition); }
+        .acc-header.active .acc-icon { background: var(--primary); color: #fff; transform: rotate(180deg); }
+        .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .acc-content p { padding: 0 30px 25px; color: var(--text-muted); margin: 0; font-size: 1.05rem; }
+
+        /* ==========================================================================
+           7. SOCIAL MEDIA
+           ========================================================================== */
+        .social-card { padding: 40px 30px; text-align: center; border-radius: var(--radius-xl); transition: var(--transition); position: relative; overflow: hidden; z-index: 1; text-decoration: none; display: block; border: 1px solid rgba(0,0,0,0.03); }
+        .sc-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; box-shadow: 0 15px 35px rgba(220, 39, 67, 0.2); }
+        .social-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(220, 39, 67, 0.35); }
+        .social-icon { font-size: 4rem; margin-bottom: 20px; display: block; transition: var(--transition); }
+        .social-card:hover .social-icon { transform: scale(1.15); }
+        .social-title { font-size: 1.5rem; margin-bottom: 8px; font-weight: 700; color: inherit; }
+        .social-stats { font-size: 1.05rem; opacity: 0.9; margin-bottom: 30px; line-height: 1.5; }
+        .social-btn { display: inline-block; padding: 12px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; transition: var(--transition); }
+        .sc-ig .social-btn { background: rgba(255,255,255,0.2); color: #fff; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .sc-ig:hover .social-btn { background: #fff; color: var(--text-dark); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+
+        /* ==========================================================================
+           8. FINAL CTA
+           ========================================================================== */
+        .cta-premium { background: linear-gradient(135deg, var(--primary) 0%, #0A1128 100%); color: #fff; padding: 100px 0; position: relative; overflow: hidden; text-align: center; border-radius: var(--radius-xl); margin: 0 auto; width: 95%; max-width: 1400px; box-shadow: var(--shadow-hover); }
+        .cta-premium h2 { font-size: 3.5rem; margin-bottom: 20px; color: #fff; letter-spacing: -1px; }
+        .cta-premium p { font-size: 1.2rem; color: rgba(255,255,255,0.8); margin-bottom: 40px; }
+
+        /* ==========================================================================
+           EXACT FOOTER (MATCHING INDEX & GALLERY)
+           ========================================================================== */
+        .footer { background: #0A1128; color: #fff; padding: 80px 0 30px; position: relative; z-index: 1; margin-top: 80px;}
+        
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1.5fr 1fr;
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 50px;
+        }
+        
+        .footer-logo {
+            width: 180px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col h4 { font-size: 1.3rem; margin-bottom: 25px; color: #fff; font-weight: 600; }
+        
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 15px; }
+        .footer-links a { color: #A0AABF; transition: var(--transition); display: inline-block; font-size: 1rem; }
+        .footer-links a:hover { color: #fff; transform: translateX(5px); }
+        
+        .footer-contact-list { list-style: none; padding: 0; margin: 0; }
+        .footer-contact-list li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; color: #A0AABF; font-size: 0.95rem; line-height: 1.6; }
+        .footer-contact-list i { color: var(--accent); font-size: 1.1rem; margin-top: 3px; flex-shrink: 0; }
+        
+        .social-links { margin-top: 20px; display: flex; gap: 12px;}
+        .social-links a { display: inline-flex; width: 45px; height: 45px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); justify-content: center; align-items: center; border-radius: 50%; transition: var(--transition); color: #fff; font-size: 1.1rem; }
+        .social-links a:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-3px); }
+        
+        .payment-icons { display: flex; gap: 15px; font-size: 2rem; color: #A0AABF; margin-top: 15px; }
+        .payment-icons i { transition: var(--transition); }
+        .payment-icons i:hover { color: #fff; transform: translateY(-2px); }
+
+        .footer-bottom { padding-top: 25px; margin-top: 30px; text-align: center; }
+        .footer-credit-divider { margin: 0 10px; opacity: 0.4; }
+        .footer-bottom strong { color: #fff; font-weight: 600; }
+
+        /* ==========================================================================
+           RESPONSIVENESS
+           ========================================================================== */
+        @media (max-width: 1200px) {
+            .footer-top { grid-template-columns: 1fr 1fr 1fr 1fr; }
+        }
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 3.8rem; }
+            .contact-info-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { grid-template-columns: repeat(2, 1fr); gap: 50px; }
+            .booking-form-wrapper { padding: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 15px 0; }
+            .brand-logo img { height: 55px; }
+            .header.scrolled .brand-logo img { height: 50px; }
+            .nav-actions, .nav-menu { display: none; }
+            .hamburger { display: block; z-index: 1002; }
+            
+            .nav-menu.active { display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--bg-main); flex-direction: column; justify-content: center; align-items: center; z-index: 1001; }
+            .nav-menu.active ul { flex-direction: column; text-align: center; gap: 25px; }
+            .nav-menu.active a.nav-link { font-size: 1.5rem; }
+
+            .contact-hero { padding-top: 120px; min-height: 65vh; }
+            .hero-title { font-size: 2.8rem; }
+            .hero-subtitle { font-size: 1.3rem; }
+            
+            .contact-info-grid { grid-template-columns: 1fr; margin-top: 20px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .booking-form-wrapper { padding: 30px 20px; }
+            
+            .full-width-map-container { padding: 0 15px; }
+            .full-width-map-container iframe { height: 350px; }
+            .map-buttons { flex-direction: column; padding: 0 15px; }
+            .map-buttons .btn { width: 100%; }
+
+            .cta-premium h2 { font-size: 2.5rem; }
+            .cta-premium .d-flex { flex-direction: column; padding: 0 20px; }
+            .cta-premium .btn { width: 100%; }
+
+            .footer-top { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .footer-logo { margin: 0 auto 20px; }
+            .social-links, .payment-icons { justify-content: center; }
+            .footer-contact-list li { justify-content: center; text-align: left; }
+            .trust-col .d-flex { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Floating Actions -->
+    <a href="https://wa.me/918264121920" class="floating-btn float-wa pulse-anim" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+918264121920" class="floating-btn float-call mobile-only" aria-label="Call Us">
+        <i class="fas fa-phone-volume"></i>
+    </a>
+
+    <!-- EXACT NAVBAR FROM HOME PAGE -->
+    <header id="navbar" class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="MOHALI.png" alt="American Detailer's" onerror="this.src='https://placehold.co/400x120/182B6B/FFFFFF?text=American+Detailers'">
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="index.html#studio" class="nav-link">Our Studio</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+                    <li><a href="contactus.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="tel:+918264121920" class="action-icon" aria-label="Call Now"><i class="fas fa-phone-volume"></i></a>
+                <a href="contactus.html" class="btn btn-primary btn-glow nav-btn">Book Appointment</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- SECTION 1: PREMIUM HERO -->
+    <section class="contact-hero">
+        <div class="hero-light-overlay"></div>
+        <div class="container hero-content text-center">
+            <div class="breadcrumb gs-reveal">Home &nbsp;/&nbsp; Contact</div>
+            <h1 class="hero-title gs-reveal">CONTACT US</h1>
+            <h2 class="hero-subtitle gs-reveal">We're Here To Bring Your Car Back To Life.</h2>
+            <p class="hero-desc gs-reveal">Need Ceramic Coating, PPF, Paint Correction or Premium Detailing?<br>Our experts are ready to help.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CONTACT INFORMATION (Fixed Typography matching Image 1) -->
+    <div class="container">
+        <div class="contact-info-grid" data-aos="fade-up">
+            <!-- Card 1 -->
+            <div class="glass-card info-card hover-lift">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Studio Address</h3>
+                <p>American Detailer's<br>E59 Sector 73 Industrial Area,<br>Sahibzada Ajit Singh Nagar<br>Mohali, Punjab 160062</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="glass-card info-card hover-lift">
+                <div class="info-icon"><i class="fas fa-phone-volume"></i></div>
+                <h3>Phone</h3>
+                <p>+91 8264121920<br>+91 87270 60001</p>
+                <a href="tel:+918264121920" class="click-to-call">Click to Call</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="glass-card info-card hover-lift">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
+                <a href="mailto:americandetailers23@gmail.com">americandetailers23@gmail.com</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="glass-card info-card hover-lift">
+                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                <h3>Working Hours</h3>
+                <p>Monday – Sunday<br>09:30 AM – 7:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: BOOK APPOINTMENT FORM -->
+    <section id="booking" class="form-section section-padding pb-0 mt-5">
+        <div class="bg-gradient-circle blur-blue"></div>
+        <div class="bg-gradient-circle blur-red"></div>
+        
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h4 class="section-label">Reserve Your Slot</h4>
+                <h2 class="section-title">Book An <span class="text-primary">Appointment</span></h2>
+                <p class="subtitle">Fill out the details below and we will confirm your premium detailing session immediately.</p>
+            </div>
+
+            <div class="glass-card booking-form-wrapper" data-aos="zoom-in">
+                <form id="contactForm">
+                    <div class="form-grid">
+                        <!-- Row 1 -->
+                        <div class="form-floating">
+                            <input type="text" id="name" class="form-input" required placeholder=" ">
+                            <label>Full Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="tel" id="phone" class="form-input" required placeholder=" ">
+                            <label>Phone Number</label>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="form-floating full-width">
+                            <input type="email" id="email" class="form-input" required placeholder=" ">
+                            <label>Email Address</label>
+                        </div>
+                        
+                        <!-- Row 3 -->
+                        <div class="form-floating">
+                            <input type="text" id="brand" class="form-input" required placeholder=" ">
+                            <label>Vehicle Brand</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" id="model" class="form-input" required placeholder=" ">
+                            <label>Vehicle Model</label>
+                        </div>
+                        
+                        <!-- Row 4 -->
+                        <div class="form-floating full-width">
+                            <select id="service" class="form-input" required onchange="toggleCustomService(this.value)">
+                                <option value="" disabled selected hidden></option>
+                                <option value="Ceramic Coating">Ceramic Coating</option>
+                                <option value="PPF">Paint Protection Film (PPF)</option>
+                                <option value="Paint Correction">Paint Correction</option>
+                                <option value="Car Wrapping">Car Wrapping</option>
+                                <option value="Interior Detailing">Interior Detailing</option>
+                                <option value="Exterior Detailing">Exterior Detailing</option>
+                                <option value="Luxury Car Wash">Luxury Car Wash</option>
+                                <option value="Bike Detailing">Bike Detailing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label style="top: 8px; font-size: 0.75rem; color: var(--primary); font-weight: 600; opacity: 1 !important; visibility: visible !important;">Select Service</label>
+                            <i class="fas fa-chevron-down select-icon"></i>
+                        </div>
+
+                        <!-- Row: Dynamic Custom Service Input (Hidden by default) -->
+                        <div class="form-floating full-width" id="otherServiceContainer" style="display: none;">
+                            <input type="text" id="otherService" class="form-input" placeholder=" ">
+                            <label>Please specify your requirement</label>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="form-floating">
+                            <input type="date" id="date" class="form-input" required placeholder=" ">
+                            <label style="top: 8px; font-size: 0.75rem; color: var(--primary); font-weight: 600;">Preferred Date</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="time" id="time" class="form-input" required placeholder=" ">
+                            <label style="top: 8px; font-size: 0.75rem; color: var(--primary); font-weight: 600;">Preferred Time</label>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="form-floating full-width">
+                            <textarea id="message" class="form-input" placeholder=" "></textarea>
+                            <label>Message (Optional)</label>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="full-width">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">I agree to the Privacy Policy</span>
+                            </label>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="full-width mt-3">
+                            <button type="submit" class="btn btn-primary w-100 btn-glow ripple" style="padding: 20px; font-size: 1.1rem;">
+                                Book Appointment <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: GOOGLE MAP -->
+    <section class="map-section bg-secondary section-padding pb-0 pt-5">
+        <div class="container pt-5">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h4 class="section-label">Location</h4>
+                <h2 class="section-title">Visit Our <span class="text-primary">Studio</span></h2>
+            </div>
+        </div>
+        <div class="full-width-map-container" data-aos="zoom-in">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.730302302324!2d76.7118683!3d30.7100062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feee56c2755e1%3A0xb36ed81f33f92de2!2sSector%2072%2C%20Sahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container">
+            <div class="map-buttons" data-aos="fade-up">
+                <a href="https://share.google/ra8ZhBNweFsGM33Xx" target="_blank" class="btn btn-primary btn-glow ripple"><i class="fas fa-directions me-2"></i> Get Directions</a>
+                <a href="https://share.google/ra8ZhBNweFsGM33Xx" target="_blank" class="btn btn-outline"><i class="fas fa-map me-2"></i> Open in Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FAQ -->
+    <section class="section-padding bg-secondary">
+        <div class="container faq-container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h4 class="section-label">Got Questions?</h4>
+                <h2 class="section-title">Frequently Asked <span class="text-primary">Questions</span></h2>
+            </div>
+            
+            <div class="luxury-accordion">
+                <div class="acc-item" data-aos="fade-up">
+                    <button class="acc-header">
+                        Where are you located? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>Our premium studio is located at E59 Sector 72 Industrial Area, Mohali, Punjab 160062.</p>
+                    </div>
+                </div>
+                <div class="acc-item" data-aos="fade-up" data-aos-delay="50">
+                    <button class="acc-header">
+                        Do I need an appointment? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>While walk-ins are welcome for general inquiries, we highly recommend booking an appointment for detailing, PPF, and Ceramic Coating to ensure immediate dedicated service.</p>
+                    </div>
+                </div>
+                <div class="acc-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="acc-header">
+                        How long does Ceramic Coating take? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>Ceramic coating typically takes 2-3 days. This includes meticulous multi-stage paint correction, coating application, and proper curing time in our climate-controlled bay.</p>
+                    </div>
+                </div>
+                <div class="acc-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="acc-header">
+                        How long does PPF take? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>A full body Paint Protection Film (PPF) installation requires 4-5 days to ensure every edge is perfectly tucked, wrapped, and settled seamlessly.</p>
+                    </div>
+                </div>
+                <div class="acc-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="acc-header">
+                        Can I call before visiting? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>Absolutely! You can call us directly at +91 82641 21920 or message us on WhatsApp to discuss your vehicle's requirements before you visit.</p>
+                    </div>
+                </div>
+                <div class="acc-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="acc-header">
+                        Do you provide Bike Detailing? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>Yes, we offer specialized luxury detailing, paint correction, and ceramic coating packages designed exclusively for superbikes and premium motorcycles.</p>
+                    </div>
+                </div>
+                <div class="acc-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="acc-header">
+                        Do you provide Pickup & Drop? 
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-content">
+                        <p>Yes, we provide safe and secure pickup and drop facilities across Mohali and Chandigarh for our premium service packages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: SOCIAL MEDIA -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h4 class="section-label">Stay Connected</h4>
+                <h2 class="section-title">Join Our <span class="text-primary">Community</span></h2>
+                <p class="subtitle mt-3">Follow us on Instagram for daily updates, behind-the-scenes, and stunning vehicle transformations.</p>
+            </div>
+
+            <div class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="0">
+                <a href="https://www.instagram.com/american_detailers" target="_blank" class="social-card sc-ig" style="width: 100%; max-width: 450px;">
+                    <i class="fab fa-instagram social-icon"></i>
+                    <h3 class="social-title">Instagram</h3>
+                    <p class="social-stats">american_detailers<br>11.9K Followers</p>
+                    <span class="social-btn">Follow Now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA -->
+    <section class="cta-premium" data-aos="zoom-in">
+        <div class="container text-center">
+            <h2>Ready To Give Your Car A Showroom Finish?</h2>
+            <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                <a href="#booking" class="btn btn-outline text-white border-white">Book Appointment</a>
+                <a href="tel:+918264121920" class="btn btn-primary btn-glow bg-accent border-0">Call Now</a>
+                <a href="https://wa.me/918264121920" class="btn btn-whatsapp"><i class="fab fa-whatsapp me-2"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXACT FIXED FOOTER -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <!-- Column 1: Logo & Desc -->
+            <div class="footer-col brand-col">
+                <img src="MOHALI.png" alt="American Detailer's Logo" class="footer-logo mb-3" loading="lazy">
+                <p class="text-white font-weight-bold">"We Bring Your Cars To Life."</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2: Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#studio">Our Studio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Contact Info -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>E-59, Phase 8, Industrial Area, Sector 73,<br>Sahibzada Ajit Singh Nagar, Mohali, Punjab, India</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-volume"></i>
+                        <span>+91 82641 21920<br>+91 87270 60001</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>americandetailers23@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Sun: 9:30AM - 7:00PM</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Trust & Payments -->
+            <div class="footer-col trust-col">
+                <h4>Trust & Quality</h4>
+                
+                <div class="mb-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <i class="fab fa-google fs-4" style="color: #4285F4;"></i>
+                        <div class="text-warning fs-5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="text-white font-weight-bold" style="font-size: 0.95rem;">Rated 4.9 on Google (899+ Reviews)</div>
+                </div>
+                
+                <h4 class="mt-4 mb-2">Secure Payments</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="footer-bottom container">
+            <p class="m-0 text-muted-light">
+                &copy; 2026 American Detailer's. All Rights Reserved.
+                <span class="footer-credit-divider">|</span>
+                Designed by <strong class="text-white">Princepal Singh</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        // Custom Service Toggle Logic
+        function toggleCustomService(value) {
+            const container = document.getElementById('otherServiceContainer');
+            const input = document.getElementById('otherService');
+            if (value === 'Other') {
+                container.style.display = 'block';
+                input.setAttribute('required', 'true');
+            } else {
+                container.style.display = 'none';
+                input.removeAttribute('required');
+                input.value = ''; // Reset if changed
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // Lenis Smooth Scroll
+            let lenis;
+            if (typeof Lenis !== 'undefined') {
+                lenis = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    direction: 'vertical',
+                    smooth: true
+                });
+
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
+            }
+
+            // AOS Integration
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 1000, once: true, offset: 50, easing: 'ease-out-cubic' });
+            }
+
+            // GSAP Integration
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+                if (lenis) {
+                    lenis.on('scroll', ScrollTrigger.update);
+                    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+                    gsap.ticker.lagSmoothing(0);
+                }
+
+                // Initial Reveal
+                gsap.from(".gs-reveal", { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out", delay: 0.2 });
+
+                // Scroll Progress
+                const scrollBar = document.getElementById('scroll-progress');
+                if (scrollBar) {
+                    gsap.to(scrollBar, { width: "100%", ease: "none", scrollTrigger: { trigger: document.body, start: "top top", end: "bottom bottom", scrub: 0.3 } });
+                }
+            }
+
+            // Navbar & Hamburger Logic (Exact from Home Page)
+            const header = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    const icon = hamburger.querySelector('i');
+                    if (navMenu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+                    else icon.classList.replace('fa-times', 'fa-bars');
+                });
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        hamburger.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                    });
+                });
+            }
+
+            // FAQ Accordion Logic
+            const accHeaders = document.querySelectorAll('.acc-header');
+            accHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.acc-icon i');
+                    
+                    document.querySelectorAll('.acc-content').forEach(item => {
+                        if (item !== content) {
+                            item.style.maxHeight = null;
+                            item.previousElementSibling.classList.remove('active');
+                        }
+                    });
+
+                    header.classList.toggle('active');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Booking Form to WhatsApp Submission - Fixed with String Concatenation and Emojis
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const brand = document.getElementById('brand').value.trim();
+                    const model = document.getElementById('model').value.trim();
+                    const dropdownService = document.getElementById('service').value;
+                    const otherService = document.getElementById('otherService').value.trim();
+                    const date = document.getElementById('date').value;
+                    const time = document.getElementById('time').value;
+                    const message = document.getElementById('message').value.trim();
+
+                    const finalService = (dropdownService === 'Other') ? otherService : dropdownService;
+                    
+                    // Fixed string concatenation instead of template literals to avoid glitchy text
+                    let text = "Hi American Detailer's,\n\nI want to book an appointment.\n\n*Booking Details:*\n";
+                    text += "👤 *Name:* " + name + "\n";
+                    text += "📱 *Phone:* " + phone + "\n";
+                    text += "📧 *Email:* " + email + "\n";
+                    text += "🚗 *Vehicle:* " + brand + " " + model + "\n";
+                    text += "✨ *Service:* " + finalService + "\n";
+                    text += "📅 *Date:* " + date + "\n";
+                    text += "⏰ *Time:* " + time;
+
+                    if (message) {
+                        text += "\n\n📝 *Message:* " + message;
+                    }
+
+                    text += "\n\nPlease confirm this slot.";
+
+                    const encodedText = encodeURIComponent(text);
+                    const waNumber = '918264121920';
+                    
+                    window.open("https://wa.me/" + waNumber + "?text=" + encodedText, '_blank');
+                    
+                    contactForm.reset();
+                    toggleCustomService('');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
